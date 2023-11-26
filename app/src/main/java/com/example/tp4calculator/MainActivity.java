@@ -23,19 +23,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void getNbr(View v){
+        Button nbrBtn = (Button) v;
+        setNbr(nbrBtn.getText().toString());
+    }
 
-
-
-    public void Zero(View v){setNbr("0");}
-    public void One(View v){setNbr("1");}
-    public void Two(View v){setNbr("2");}
-    public void Three(View v){setNbr("3");}
-    public void Four(View v){setNbr("4");}
-    public void Five(View v){setNbr("5");}
-    public void Six(View v){setNbr("6");}
-    public void Seven(View v){setNbr("7");}
-    public void Eight(View v){setNbr("8");}
-    public void Nine(View v){setNbr("9");}
 
 
     public void Clear(View v){
@@ -44,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         b = "0";
         op = false;
         opUp = false;
+        comma = false;
     }
     public void Plus(View v){
 
@@ -95,14 +88,26 @@ public class MainActivity extends AppCompatActivity {
                 if(hisOp.equals("/") && Float.parseFloat(b)==0){
                     tVResult.setText("ERROR");
                 }else {
-                    tVResult.setText(toStr(operation(a, b, hisOp)));
+                    String res = toStr(operation(a, b, hisOp));
+                    if(res.contains(".")){
+                        String result = res.substring(0, res.indexOf(".")+4);
+                        tVResult.setText(result);
+                    }else {
+                        tVResult.setText(res);
+                    }
+
                 }
+
+
 
                 op = false;
                 opUp = false;
-                comma = false;
+
             }
         }
+
+//        String value = tVResult.getText().toString();
+//        if(value.contains(".")){comma=true;}else {comma=false;}
 
 
     }
@@ -153,10 +158,11 @@ public class MainActivity extends AppCompatActivity {
         if(tVResult.getText().toString().equals("0") || tVResult.getText().toString().equals("ERROR") || a.equals("ERROR") || b.equals("ERROR")){
             tVResult.setText(n);
             a = "0";
-//          b = "0";
+            comma = false;
         } else if (op) {
             tVResult.setText(n);
             op = false;
+            comma = false;
         }else{
             String t = tVResult.getText().toString();
             tVResult.setText(t + n);
@@ -169,8 +175,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    Float add(String a, String b){
-        return Float.parseFloat(a) + Float.parseFloat(b);
+    Float add(String a, String b){return Float.parseFloat(a) + Float.parseFloat(b);
     }
     Float minus(String a, String b){
         return Float.parseFloat(a) - Float.parseFloat(b);

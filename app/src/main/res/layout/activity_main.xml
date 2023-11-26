@@ -147,7 +147,7 @@
                 android:layout_marginBottom="5dp"
                 android:orientation="horizontal">
                 <Button
-                    android:onClick="Seven"
+                    android:onClick="getNbr"
                     android:id="@+id/seven"
                     android:clickable="true"
                     android:foreground="?android:attr/selectableItemBackground"
@@ -165,7 +165,7 @@
                     android:fontFamily="sans-serif-medium"
                     />
                 <Button
-                    android:onClick="Eight"
+                    android:onClick="getNbr"
                     android:id="@+id/eight"
                     android:clickable="true"
                     android:foreground="?android:attr/selectableItemBackground"
@@ -183,7 +183,7 @@
                     android:fontFamily="sans-serif-medium"
                     />
                 <Button
-                    android:onClick="Nine"
+                    android:onClick="getNbr"
                     android:id="@+id/nine"
                     android:clickable="true"
                     android:foreground="?android:attr/selectableItemBackground"
@@ -224,7 +224,7 @@
                 android:layout_marginBottom="5dp"
                 android:orientation="horizontal">
                 <Button
-                    android:onClick="Four"
+                    android:onClick="getNbr"
                     android:id="@+id/four"
                     android:clickable="true"
                     android:foreground="?android:attr/selectableItemBackground"
@@ -242,7 +242,7 @@
                     android:fontFamily="sans-serif-medium"
                     />
                 <Button
-                    android:onClick="Five"
+                    android:onClick="getNbr"
                     android:id="@+id/five"
                     android:clickable="true"
                     android:foreground="?android:attr/selectableItemBackground"
@@ -260,7 +260,7 @@
                     android:fontFamily="sans-serif-medium"
                     />
                 <Button
-                    android:onClick="Six"
+                    android:onClick="getNbr"
                     android:id="@+id/six"
                     android:clickable="true"
                     android:foreground="?android:attr/selectableItemBackground"
@@ -301,7 +301,7 @@
                 android:layout_marginBottom="5dp"
                 android:orientation="horizontal">
                 <Button
-                    android:onClick="One"
+                    android:onClick="getNbr"
                     android:id="@+id/one"
                     android:clickable="true"
                     android:foreground="?android:attr/selectableItemBackground"
@@ -319,7 +319,7 @@
                     android:fontFamily="sans-serif-medium"
                     />
                 <Button
-                    android:onClick="Two"
+                    android:onClick="getNbr"
                     android:id="@+id/two"
                     android:clickable="true"
                     android:foreground="?android:attr/selectableItemBackground"
@@ -337,7 +337,7 @@
                     android:fontFamily="sans-serif-medium"
                     />
                 <Button
-                    android:onClick="Three"
+                    android:onClick="getNbr"
                     android:id="@+id/three"
                     android:clickable="true"
                     android:foreground="?android:attr/selectableItemBackground"
@@ -378,7 +378,7 @@
                 android:orientation="horizontal"
                 android:weightSum="4">
                 <Button
-                    android:onClick="Zero"
+                    android:onClick="getNbr"
                     android:id="@+id/zero"
                     android:clickable="true"
                     android:foreground="?android:attr/selectableItemBackground"
